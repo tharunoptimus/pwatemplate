@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>PWA Front Page</title>
+
+    <meta name="theme-color" content="#317EFB"/>
+	<meta name="description" content="Enter the description.">
+	<meta name="keywords" content="Enter the keywords">
+	<meta name="author" content="author Name">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="manifestlogo.png">
+
+    <style>
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        ::-webkit-scrollbar {
+            width: 20px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #d6dee1;
+            border-radius: 20px;
+            border: 6px solid transparent;
+            background-clip: content-box;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #adb3b6;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <center><h1>Front Page of PWA App.</h1></center>
+        </div>
+    </div>
+</body>
+<script>
+    if('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('serviceworker.js')
+                .then((reg) => console.log('Success: ', reg.scope))
+                .catch((err) => console.log('Failure: ', err));
+        })
+    }
+</script>
+</html>

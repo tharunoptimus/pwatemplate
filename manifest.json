@@ -1,0 +1,17 @@
+{
+    "short_name": "PWA",
+    "name": "PWA App Template",
+    "description": "Template for making PWA app",
+    "icons": [
+      {
+        "src": "manifestlogo.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+      }
+    ],
+    "start_url": "https://tharunoptimus.github.io/pwatemplate",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "theme_color": "#3367D6"
+  }
